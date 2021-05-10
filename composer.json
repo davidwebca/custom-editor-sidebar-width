@@ -1,0 +1,18 @@
+{
+    "name": "davidwebca/custom-editor-sidebar-width",
+    "type": "wordpress-plugin",
+    "description": "WordPress plugin to allow users to set their desired Gutenberg sidebar width.",
+    "keywords": ["wordpress", "plugin", "editor", "gutenberg"],
+    "homepage": "https://github.com/davidwebca/custom-editor-sidebar-width",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Lapointe Gilbert",
+            "email": "info@davidweb.ca",
+            "homepage": "https://davidweb.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
