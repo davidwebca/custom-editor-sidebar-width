@@ -67,7 +67,7 @@ class SidebarWidthRangeControl extends Component {
 
     render() {
         return (<RangeControl
-            label="Width"
+            label={ __('Width', 'cesw') }
             onChange={ (width) => {
                 this.setState({value:width})
                 this.debouncedSave(width);

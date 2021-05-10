@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-05-10T03:42:48+00:00\n"
+"POT-Creation-Date: 2021-05-10T03:50:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0-alpha-1a19028\n"
 
@@ -31,6 +31,11 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://davidweb.ca"
+msgstr ""
+
+#: src/scripts/app.js:70
+#: dist/scripts/app.js:78
+msgid "Width"
 msgstr ""
 
 #: src/scripts/app.js:88
