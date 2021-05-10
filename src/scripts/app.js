@@ -2,6 +2,7 @@ import { registerPlugin } from '@wordpress/plugins';
 import { Fragment, Component } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
+import domReady from '@wordpress/dom-ready';
 import { 
     RangeControl, 
     Panel,
@@ -9,18 +10,23 @@ import {
     PanelRow
 } from '@wordpress/components';
 import {
-    loadPromise
+    loadPromise,
+    models
 } from '@wordpress/api';
 import { debounce } from 'lodash';
 
-let current_user = new wp.api.models.UsersMe();
 let initialWidthValue = 280;
-current_user.fetch().then( (response) => {
-    if(response.meta.editor_width) {
-        initialWidthValue = response.meta.editor_width;
-        document.documentElement.style.setProperty('--cesw-sidebar-width', response.meta.editor_width + 'px');
-    }
-})
+let current_user = null;
+
+loadPromise.then( () => {
+    current_user = new models.UsersMe();
+    current_user.fetch().then( (response) => {
+        if(response.meta.editor_width) {
+            initialWidthValue = response.meta.editor_width;
+            document.documentElement.style.setProperty('--cesw-sidebar-width', response.meta.editor_width + 'px');
+        }
+    });
+});
 
 class SidebarWidthRangeControl extends Component {
     constructor( props ) {
@@ -30,7 +36,7 @@ class SidebarWidthRangeControl extends Component {
         }
 
         this.debouncedSave = debounce( (width) => {
-            let model = new wp.api.models.UsersMe({
+            let model = new models.UsersMe({
                 meta: {
                     'editor_width':width
                 }
@@ -45,7 +51,7 @@ class SidebarWidthRangeControl extends Component {
 
     componentDidMount() {
         loadPromise.then( () => {
-            let current_user = new wp.api.models.UsersMe();
+            let current_user = new models.UsersMe();
             current_user.fetch().then( (response) => {
                 if(response.meta.editor_width) {
                     this.setState({value:response.meta.editor_width})
@@ -56,7 +62,7 @@ class SidebarWidthRangeControl extends Component {
     }
 
     setWidth(width) {
-        document.documentElement.style.setProperty('--sidebar-width', width + 'px');
+        document.documentElement.style.setProperty('--cesw-sidebar-width', width + 'px');
     }
 
     render() {
