@@ -8,14 +8,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-05-10T03:46:11+00:00\n"
-"PO-Revision-Date: 2021-05-09 23:47-0400\n"
-"Language: en_US\n"
+"PO-Revision-Date: 2021-05-09 23:49-0400\n"
+"Language: fr_CA\n"
 "X-Generator: Poedit 2.4.3\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin
 msgid "Custom editor sidebar width"
-msgstr ""
+msgstr "Largeur personnalisée pour la barre latérale de l'éditeur"
 
 #. Plugin URI of the plugin
 msgid "https://github.com/davidwebca/custom-editor-sidebar-width"
@@ -23,7 +23,7 @@ msgstr ""
 
 #. Description of the plugin
 msgid "WordPress plugin to allow users to set their desired Gutenberg sidebar width."
-msgstr ""
+msgstr "Plugin permettant aux utilisateurs de configurer leur propre largeur pour la barre latérale de Gutenberg."
 
 #. Author of the plugin
 msgid "David Lapointe Gilbert"

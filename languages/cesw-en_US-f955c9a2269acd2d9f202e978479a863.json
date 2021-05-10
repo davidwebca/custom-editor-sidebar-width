@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2021-05-09 23:42-0400",
+    "translation-revision-date": "2021-05-09 23:47-0400",
     "generator": "WP-CLI\/2.5.0-alpha-1a19028",
     "source": "dist\/scripts\/app.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "en_US",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "Width": [
+                "Width"
+            ],
             "Sidebar width": [
                 "Sidebar width"
             ]
