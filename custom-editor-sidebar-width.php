@@ -22,6 +22,10 @@ add_action('admin_init', function () {
     ]);
 });
 
+add_action('init', function() {
+    load_plugin_textdomain( 'cesw', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+});
+
 add_action('admin_enqueue_scripts', function($hook) {
     $ds = DIRECTORY_SEPARATOR;
     $script_path = plugin_dir_path(__FILE__) . 'dist' . $ds . 'scripts' . $ds . 'app.js';
