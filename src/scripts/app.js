@@ -85,9 +85,9 @@ let arrow_icon = <svg width="33" height="18" viewBox="0 0 33 18"><path d="M21.18
 const CustomSidebarWidthPlugin = () => (
     <Fragment>
         <PluginSidebarMoreMenuItem target="plugin-sidebar-width" icon={ arrow_icon }>
-        {__("Sidebar width", "sidebarwidth")}
+        {__("Sidebar width", "cesw")}
         </PluginSidebarMoreMenuItem>
-        <PluginSidebar name="plugin-sidebar-width" title={ __("Sidebar width", "sidebarwidth") } icon={ arrow_icon }>
+        <PluginSidebar name="plugin-sidebar-width" title={ __("Sidebar width", "cesw") } icon={ arrow_icon }>
             <Panel>
                 <PanelBody>
                     <SidebarWidthRangeControl initialValue={initialWidthValue}></SidebarWidthRangeControl>
