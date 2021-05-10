@@ -7,6 +7,8 @@ License: MIT
 Author: David Lapointe Gilbert
 Version: 1.0.0
 Author URI: https://davidweb.ca
+Text Domain: cesw
+Domain Path: /languages
 */
 
 /**
