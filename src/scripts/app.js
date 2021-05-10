@@ -67,7 +67,7 @@ class SidebarWidthRangeControl extends Component {
 
     render() {
         return (<RangeControl
-            label="Largeur"
+            label="Width"
             onChange={ (width) => {
                 this.setState({value:width})
                 this.debouncedSave(width);
@@ -87,7 +87,7 @@ const CustomSidebarWidthPlugin = () => (
         <PluginSidebarMoreMenuItem target="plugin-sidebar-width" icon={ arrow_icon }>
         {__("Sidebar width", "sidebarwidth")}
         </PluginSidebarMoreMenuItem>
-        <PluginSidebar name="plugin-sidebar-width" title="Largeur la barre d'outils" icon={ arrow_icon }>
+        <PluginSidebar name="plugin-sidebar-width" title={ __("Sidebar width", "sidebarwidth") } icon={ arrow_icon }>
             <Panel>
                 <PanelBody>
                     <SidebarWidthRangeControl initialValue={initialWidthValue}></SidebarWidthRangeControl>
