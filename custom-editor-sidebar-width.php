@@ -32,6 +32,7 @@ add_action('admin_enqueue_scripts', function($hook) {
     wp_enqueue_script( 'cesw_vendor_script', $script_vendor_url, $script_asset['dependencies'], $script_asset['version'] );
     wp_add_inline_script('cesw_vendor_script', file_get_contents($script_manifest_path), 'before');
     wp_enqueue_script( 'cesw_script', $script_url, ['cesw_vendor_script'], '1.0.0' );
+    wp_set_script_translations( 'cesw_script', 'cesw');
 });
 
 add_action('admin_head', function () {
