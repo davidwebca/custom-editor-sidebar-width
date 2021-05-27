@@ -42,7 +42,11 @@ add_action('admin_enqueue_scripts', function($hook) {
 });
 
 add_action('admin_head', function () {
-    // We use css custom properties to make sure the sidebar 
+    /**
+     * We use css with a custom property that we change with JS to make sure the sidebar
+     * stays with that width, otherwise react removes the attribute since the sidebar
+     * mounts / unmounts every time the user changes tabs.
+     */
     ?>
     <style>
         :root{
