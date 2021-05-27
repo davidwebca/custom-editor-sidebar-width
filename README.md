@@ -2,6 +2,8 @@
 
 This is a simple Gutenberg sidebar plugin that allows users to widen the sidebar. Very useful with ACF when the text editor feels cramped in the sidebar and you'd prefer not allowing users to use the edit mode.
 
+![Visual example](https://github.com/davidwebca/custom-editor-sidebar-width/raw/main/example.gif "Visual example or the plugin")
+
 ## Requirements
 
 - [Composer](https://getcomposer.org/download/)
