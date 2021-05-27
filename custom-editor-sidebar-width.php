@@ -5,7 +5,7 @@ Plugin URI: https://github.com/davidwebca/custom-editor-sidebar-width
 Description: WordPress plugin to allow users to set their desired Gutenberg sidebar width.
 License: MIT
 Author: David Lapointe Gilbert
-Version: 1.0.0
+Version: 1.0.1
 Author URI: https://davidweb.ca
 Text Domain: cesw
 Domain Path: /languages
@@ -32,8 +32,8 @@ add_action('admin_enqueue_scripts', function($hook) {
     $script_asset_path = plugin_dir_path(__FILE__) . $ds . 'dist' . $ds . 'scripts' . $ds . 'manifest.asset.php';
     $script_manifest_path = plugin_dir_path(__FILE__) . $ds . 'dist' . $ds . 'scripts' . $ds . 'manifest.js';
     $script_asset = file_exists( $script_asset_path ) ? require( $script_asset_path ) : array( 'dependencies' => array(), 'version' => filemtime( $script_path ) );
-    $script_url = plugin_dir_url( __FILE__ ) . 'dist' . $ds . 'scripts' . $ds . 'app.js';
-    $script_vendor_url = plugin_dir_url( __FILE__ ) . 'dist' . $ds . 'vendor.js';
+    $script_url = plugin_dir_url( __FILE__ ) . 'dist/scripts/app.js';
+    $script_vendor_url = plugin_dir_url( __FILE__ ) . 'dist/vendor.js';
 
     wp_enqueue_script( 'cesw_vendor_script', $script_vendor_url, $script_asset['dependencies'], $script_asset['version'] );
     wp_add_inline_script('cesw_vendor_script', file_get_contents($script_manifest_path), 'before');
