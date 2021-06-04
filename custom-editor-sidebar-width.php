@@ -5,7 +5,7 @@ Plugin URI: https://github.com/davidwebca/custom-editor-sidebar-width
 Description: WordPress plugin to allow users to set their desired Gutenberg sidebar width.
 License: MIT
 Author: David Lapointe Gilbert
-Version: 1.0.1
+Version: 1.0.2
 Author URI: https://davidweb.ca
 Text Domain: cesw
 Domain Path: /languages
