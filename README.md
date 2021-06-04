@@ -13,7 +13,7 @@ This is a simple Gutenberg sidebar plugin that allows users to widen the sidebar
 Install via Composer:
 
 ```bash
-$ composer require davidwebca/custom-editor-sidebar-width
+composer require davidwebca/custom-editor-sidebar-width
 ```
 
 Or simply download zip of this repo and place in your plugins directory!
