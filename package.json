@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "wordpress-custom-editor-sidebar-width",
   "browserslist": [
     "extends @wordpress/browserslist-config"
   ],
