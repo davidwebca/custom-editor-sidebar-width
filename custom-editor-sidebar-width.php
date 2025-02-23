@@ -32,16 +32,12 @@ add_action('admin_enqueue_scripts', function($hook) {
     $screen = get_current_screen();
     if ( $screen->base == 'post' || $screen->base == 'edit' && $screen->is_block_editor ){
         $ds = DIRECTORY_SEPARATOR;
-        $script_path = plugin_dir_path(__FILE__) . 'dist' . $ds . 'scripts' . $ds . 'app.js';
-        $script_asset_path = plugin_dir_path(__FILE__) . $ds . 'dist' . $ds . 'scripts' . $ds . 'manifest.asset.php';
-        $script_manifest_path = plugin_dir_path(__FILE__) . $ds . 'dist' . $ds . 'scripts' . $ds . 'manifest.js';
+        $script_path = plugin_dir_path(__FILE__) . 'build' . $ds . 'index.js';
+        $script_asset_path = plugin_dir_path(__FILE__) . $ds . 'build' . $ds . 'index.asset.php';
         $script_asset = file_exists( $script_asset_path ) ? require( $script_asset_path ) : array( 'dependencies' => array(), 'version' => filemtime( $script_path ) );
-        $script_url = plugin_dir_url( __FILE__ ) . 'dist/scripts/app.js';
-        $script_vendor_url = plugin_dir_url( __FILE__ ) . 'dist/vendor.js';
+        $script_url = plugin_dir_url( __FILE__ ) . 'build/index.js';
 
-        wp_enqueue_script( 'cesw_vendor_script', $script_vendor_url, $script_asset['dependencies'], $script_asset['version'] );
-        wp_add_inline_script('cesw_vendor_script', file_get_contents($script_manifest_path), 'before');
-        wp_enqueue_script( 'cesw_script', $script_url, ['cesw_vendor_script'], '1.0.0' );
+        wp_enqueue_script( 'cesw_script', $script_url, $script_asset['dependencies'], $script_asset['version'] );
         wp_set_script_translations( 'cesw_script', 'cesw', plugin_dir_path( __FILE__ ) . '/languages/');
     }  
 });
@@ -59,7 +55,8 @@ add_action('admin_head', function () {
         :root{
             --cesw-sidebar-width:280px;
         }
-        .edit-post-sidebar{
+        .interface-complementary-area__fill,
+        .interface-complementary-area{
             width: var(--cesw-sidebar-width) !important;
         }
 

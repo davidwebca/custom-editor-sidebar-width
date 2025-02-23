@@ -1,31 +1,22 @@
 {
   "private": true,
   "name": "wordpress-custom-editor-sidebar-width",
-  "browserslist": [
-    "extends @wordpress/browserslist-config"
-  ],
-  "engines": {
-    "node": ">=12.14.0"
-  },
+  "main": "build/index.js",
   "scripts": {
-    "build": "mix",
-    "build:production": "mix --production",
-    "start": "mix watch",
-    "hot": "mix watch --hot",
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
     "translate": "npm run translate:pot && npm run translate:js",
     "translate:pot": "wp i18n make-pot . ./languages/cesw.pot --ignore-domain --include=\"./*.php,./src/**/*.js\"",
     "translate:js": "wp i18n make-json ./languages --pretty-print"
   },
   "devDependencies": {
-    "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
-    "@wordpress/babel-preset-default": "^5.0.1",
-    "@wordpress/browserslist-config": "^3.0.1",
-    "@wordpress/dependency-extraction-webpack-plugin": "^3.2.1",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "eslint": "^7.20.0",
-    "eslint-plugin-import": "^2.22.1",
-    "laravel-mix": "^6.0.25",
-    "postcss": "^8.3.1"
+    "@wordpress/babel-preset-default": "^8.18.0",
+    "@wordpress/dependency-extraction-webpack-plugin": "^6.18.0",
+    "@wordpress/scripts": "^30.11.0"
   }
 }

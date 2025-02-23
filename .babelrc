@@ -5,8 +5,7 @@
             {
                 "useBuiltIns": "entry",
                 "corejs": 2,
-                "targets":
-                {
+                "targets": {
                     "browsers": [
                         "edge >= 16",
                         "safari >= 9",
@@ -17,6 +16,7 @@
                     ]
                 }
             }
-        ]
+        ],
+        "@babel/preset-react"
     ]
 }
